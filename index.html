@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yash | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00ffe1;
+      --accent: #ff0080;
+      --dark-bg: #0f0f0f;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.15);
+      --text: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(120deg, #151515, #1c1c1c);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 4em;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header p {
+      margin-top: 20px;
+      font-size: 1.3em;
+      opacity: 0.8;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.8em;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .profile-pic {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      margin-left: 450px;
+      margin-right: 500px;
+      box-shadow: 0 0 30px var(--primary);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--primary);
+    }
+
+    .projects img {
+      width: 400px;
+      height: 300px;
+      /* border-radius: 15px 15px 0 0; */
+      object-fit: fill;
+    }
+
+    .project-card {
+      overflow: hidden;
+    }
+
+    .project-card div {
+      padding: 15px;
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .social-links a {
+      color: var(--primary);
+      margin: 0 10px;
+      font-size: 1.8em;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      background: #111;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .wave {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 80px;
+    }
+
+    .wave-top {
+      top: -80px;
+      transform: rotate(180deg);
+    }
+
+    .wave-bottom {
+      bottom: -80px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Yash Maisuria</h1>
+  <p>frontend developer | Backend developer | Future Engineer</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#Education">Education</a>
+  <a href="#future">Goals</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <img src="./profile.jpg" alt="Yash Maisuria" class="profile-pic">
+  <p style="text-align: center;font-family: 'Times New Roman', Times, serif ;max-width: 700px; margin: 0 auto; padding-top:30px ;">I'm Yash Maisuria, Passionate about solving problems through elegant code From Navasari, I'm currently studying Computer Science  & Engineering at SNPIT & RC, aiming to shape the future of Web Developer.I'm constantly learning and exploring new technologies to stay at the forefront of web development.</p>
+</section>
+
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="card-container">
+    <div class="card">HTML/CSS</div>
+    <div class="card">C++</div>
+    <div class="card">Java</div>
+    <div class="card">Python</div>
+    <div class="card">SQL</div>
+    <div class="card">Problem Solver</div>
+    <div class="card">Engineering Skills</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="card-container projects">
+    <div class="card project-card">
+      <img src="./project.png" alt="Project Image">
+      <div><h1>E-commerce website</h1></div>
+    </div>
+  </div>
+</section>
+
+<section id="Education">
+  <h2>Education</h2>
+  <div class="card-container">
+    <div class="card">Achieved 80% in 12th at MSV,Vesma</div>
+    <div class="card">Achieved 9 CGPA in Computer science & Engineering at SNPIT&RC</div>
+  </div>
+</section>
+
+<section id="future">
+  <h2>Future Goals</h2>
+  <div class="card-container">
+    <div class="card">Aim to contribute to innovative tech solutions through expertise in full-stack development.</div>
+    <div class="card">Passionate about leveraging data for decision-making as a future data scientist</div>
+    <div class="card">I aspire to become a successful and impactful professional in the field of computer science</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Get In Touch</h2>
+  <div class="social-links">
+    <a href="https://www.instagram.com/_yash.2405?igsh=MWFsZXV4Zmp4MXloYQ==" target="_blank">Instagram</a>
+    <a href="" target="_blank">Github</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Yash Maisuria | All right reserved.</p>
+</footer>
+
+</body>
+</html>
